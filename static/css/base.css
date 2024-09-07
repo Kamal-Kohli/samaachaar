@@ -47,6 +47,7 @@ h1 {
 
 .heading {
     background-color: var(--bs-card-border-color);
+    border-radius: var(--bs-border-radius-lg);
     padding: 20px;
 }
 

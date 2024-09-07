@@ -254,6 +254,76 @@ nav ul li a {
     background: var(--bs-pagination-hover-bg-color);
     color: #fff;
 }
+
+/* Styling for the registration form sections */
+.logs-pages {
+    padding: 3.75rem 1rem;
+    background-color: var(--bs-card-bg-color);
+}
+
+.logs-pages .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1.875rem;
+    border-radius: var(--bs-border-radius-md);
+}
+
+.masthead {
+    margin-bottom: 2.5rem;
+}
+
+.masthead h1 {
+    font-size: 2rem;
+    margin-bottom: 1.25rem;
+}
+
+.masthead p {
+    font-size: 1rem;
+}
+
+/* Register form Border */
+.text-overlay {
+    border: 5px solid var(--bs-text-overlay-border-color);
+    border-radius: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.logout-title {
+    color: var(--bs-custom-bg-color);
+}
+
+/* Text danger animate */
+.text-danger {
+    font-weight: bold;
+    color: #c62828; 
+}
+.animated-warning {
+    animation: blinkWarning 1s infinite; 
+}
+
+/* Keyframes for the blinking effect */
+@keyframes blinkWarning {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Input field styling */
+form input[type="text"], 
+form input[type="email"], 
+form input[type="password"] {
+    width: 100%;
+    padding: 0.625rem;
+    margin-bottom: 0.9375rem;
+    border: 1px solid #ced4da;
+    border-radius: var(--bs-border-radius-sm);
+}
+
 /* Footer */
 footer .container {
     width: 100%;

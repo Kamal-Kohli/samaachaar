@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
 
     #Django-allauth
     'allauth',
@@ -47,7 +48,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
 
     #Apps
-    'news',
+      'news',
 ]
 
 MIDDLEWARE = [
@@ -62,6 +63,7 @@ MIDDLEWARE = [
     #Django Allauth
     'allauth.account.middleware.AccountMiddleware',
 ]
+
 
 ROOT_URLCONF = 'mainapp.urls'
 
@@ -89,6 +91,11 @@ AUTHENTICATION_BACKENDS = [
 
     'allauth.account.auth_backends.AuthenticationBackend',
 ]
+
+# Authentication settings
+LOGIN_URL = '/accounts/login/'
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
 
 SITE_ID = 1
 
@@ -151,7 +158,7 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True  
 EMAIL_HOST_USER = 'your-email@example.com'
 EMAIL_HOST_PASSWORD = 'your-email-password'
-DEFAULT_FROM_EMAIL = 'your_email@gmail.com' 
+DEFAULT_FROM_EMAIL = 'your_email@gmail.com'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/

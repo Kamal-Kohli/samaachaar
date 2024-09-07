@@ -59,3 +59,12 @@ h1 {
     padding: 0.5rem;
     width: 50%;
 }
+
+/* Custom HR style */
+.custom-hr {
+    border: none;
+    height: 4px;
+    background-color: var(--bs-footer-bg-color); 
+    width: 100%; 
+    margin: 20px 0; 
+}

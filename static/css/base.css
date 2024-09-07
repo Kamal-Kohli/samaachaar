@@ -230,3 +230,26 @@ nav ul li a {
 .floating-icons a:hover {
     background-color: var(--bs-floating-icons-hover-bg-color);
 }
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    margin: 1.25rem 0;
+    text-align: center;
+}
+
+.pagination a {
+    background: var(--bs-pagination-bg-color);
+    color: #fff;
+    padding: 0.625rem 1.25rem;
+    text-decoration: none;
+    border-radius: var(--bs-border-radius-sm);
+    margin: 0 0.3125rem;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.pagination a:hover {
+    background: var(--bs-pagination-hover-bg-color);
+    color: #fff;
+}

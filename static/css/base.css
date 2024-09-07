@@ -68,3 +68,37 @@ h1 {
     width: 100%; 
     margin: 20px 0; 
 }
+
+/* NavBar */
+.navbar {
+    padding: 1rem;
+    background: var(--bs-navbar-bg-color);
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+}
+
+.dropdown-menu {
+    background: var(--bs-custom-bg-color);
+}
+
+.auth-links {
+    float: right;
+}
+
+.active {
+    border-bottom: 2px solid var(--bs-primary);
+    font-weight: 500;
+}

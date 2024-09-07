@@ -253,3 +253,20 @@ nav ul li a {
     background: var(--bs-pagination-hover-bg-color);
     color: #fff;
 }
+/* Footer */
+footer .container {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+footer {
+    background-color: var(--bs-footer-bg-color); 
+    height: 130px;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
+
+footer p {
+    margin: 0; 
+}

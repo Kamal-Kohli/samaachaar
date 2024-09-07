@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --bs-bg-image: url('../images/bgimg.webp');
+    --bs-custom-bg-color: #943d24;
+    --bs-navbar-bg-color: #282512;
+    --bs-card-bg-color: #fffbf0;
+    --bs-card-border-color: #fffbf0;
+    --bs-card-shadow: 0 4px 6px #2d2d2d;
+    --bs-btn-bg-color: #943d24;
+    --bs-btn-hover-bg-color: #2d2d2d;
+    --bs-text-overlay-border-color: #282512;
+    --bs-pagination-bg-color: #943d24;
+    --bs-pagination-hover-bg-color: #282512;
+    --bs-floating-icons-bg-color: #943d24;
+    --bs-floating-icons-hover-bg-color: #2d2d2d;
+    --bs-footer-bg-color: #282512;
+    --h1-font-size: 2rem; 
+    --h1-margin-bottom: 1.25rem; 
+    --red-error: #943d24;
+}
+
+/* Apply Bootstrap variables and utility classes */
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.custom-bg {
+    background-image: var(--bs-bg-image);
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+    height: 100vh;
+}

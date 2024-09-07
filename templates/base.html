@@ -16,9 +16,10 @@
     <title>H&T Top News</title>
 </head>
 <body class="custom-bg">
+
     <!-- NavBar -->
     {% with request.resolver_match.url_name as url_name %}
-        <nav class="navbar navbar-expand-lg fixed-top navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+        <nav class="navbar navbar-expand-lg fixed-top navbar border-bottom border-body" data-bs-theme="dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="{% url 'home' %}?category=general"><img src="{% static 'images/logo.webp' %}" alt="Heads and Tails animated logo" class="logo" width="175px"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -57,20 +58,26 @@
                             </ul>
                         </li>
                         <!-- Registration/Login/Logout -->
+                        {% if request.user.is_authenticated %}
                         <li class="nav-item">
                             <a class="nav-link {% if url_name == 'accounts_logout' %}active{% endif %}" href="/accounts/logout/">Logout</a>
                         </li>
+                        {% else %}
                         <li class="nav-item">
                             <a class="nav-link {% if url_name == 'accounts_login' %}active{% endif %}" href="/accounts/login/">Login</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link {% if url_name == 'accounts_signup' %}active{% endif %}" href="/accounts/signup/">Register</a>
                         </li>
+                        {% endif %}
                     </ul>
                 </div>
             </div>
         </nav>
     {% endwith %}
+
+    
+
     
     <!-- Cards.html -->
     <div class="content container">
@@ -78,7 +85,9 @@
     </div>
 
     {% include 'home/icons.html' %}
+
     {% include 'home/footer.html' %}
+
     
 </body>
 </html>

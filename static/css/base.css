@@ -102,3 +102,101 @@ nav ul li a {
     border-bottom: 2px solid var(--bs-primary);
     font-weight: 500;
 }
+
+/* Card styling */
+.card {
+    border: none;
+    border-radius: var(--bs-border-radius-lg);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    background-color: var(--bs-card-bg-color);
+    box-shadow: var(--bs-card-shadow);
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Image styling */
+.card-img-top {
+    border-top-left-radius: var(--bs-border-radius-lg);
+    border-top-right-radius: var(--bs-border-radius-lg);
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+/* Card body */
+.card-body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 1rem;
+}
+
+/* Article author */
+.card-title.p {
+    font-size: 0.875rem;
+    color: #212a31;
+    margin-bottom: 0.625rem;
+}
+
+/* Article title */
+.card-title.h5 {
+    font-size: 1.125rem;
+    font-weight: bold;
+    margin-bottom: 0.9375rem;
+    color: #212a31;
+}
+
+/* Article source */
+.card-title.h4 {
+    font-size: 1rem;
+    color: var(--bs-custom-bg-color);
+    margin-bottom: 0.625rem;
+}
+
+/* Article description */
+.card-text {
+    font-size: 0.875rem;
+    color: #748d92;
+    margin-bottom: 0.9375rem;
+    flex-grow: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.news-article {
+    background: var(--bs-card-bg-color);
+    padding: 1rem;
+    border: 1px solid var(--bs-card-border-color);
+    border-radius: var(--bs-border-radius-sm);
+}
+
+/* Read more button */
+.btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: var(--bs-btn-bg-color);
+    color: #fff;
+    padding: 0.625rem;
+    border: none;
+    border-radius: var(--bs-border-radius-sm);
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 0.9375rem;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: var(--bs-btn-hover-bg-color);
+    color: #fff;
+}
+
+.btn-signup1:hover {
+    background-color: #c62828;
+    color: #fff;
+}

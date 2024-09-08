@@ -16,7 +16,7 @@
     <title>H&T Top News</title>
 </head>
 <body class="custom-bg">
-    {% if request.user.is_authenticated %}
+   
     <!-- NavBar -->
     {% with request.resolver_match.url_name as url_name %}
         <nav class="navbar navbar-expand-lg fixed-top navbar border-bottom border-body" data-bs-theme="dark">
@@ -75,27 +75,20 @@
             </div>
         </nav>
     {% endwith %}
-    {% endif %}
+   
     
-    {% if not request.user.is_authenticated %}
-    <!-- Centered Logo -->
-    <div class=" bg-dark text-center">
-        <a href="{% url 'home' %}?category=general">
-            <img src="{% static 'images/logo.webp' %}" alt="Heads and Tails animated logo" width="300px">
-        </a>
-    </div>
-    {% endif %}
+
     
     <!-- Cards.html -->
     <div class="content container">
         {% block content %}{% endblock %}
     </div>
 
-    {% if request.user.is_authenticated %}
+    
     {% include 'home/icons.html' %}
 
     {% include 'home/footer.html' %}
-    {% endif %}
+    
     
 </body>
 </html>

@@ -104,6 +104,10 @@ nav ul li a {
     font-weight: 500;
 }
 
+.navbar .form-control {
+    width: 200px;
+}
+
 /* Card styling */
 .card {
     border: none;

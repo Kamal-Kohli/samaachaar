@@ -32,19 +32,20 @@
                         </li>
                         <!-- Country Dropdown links -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Country</a>
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Countries</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="{% url 'home' %}?country=de">Germany</a></li>
-                                <li><a class="dropdown-item" href="{% url 'home' %}?country=in">India</a></li>
-                                <li><a class="dropdown-item" href="{% url 'home' %}?country=ie">Ireland</a></li>
-                                <li><a class="dropdown-item" href="{% url 'home' %}?country=il">Israel</a></li>
-                                <li><a class="dropdown-item" href="{% url 'home' %}?country=ru">Russia</a></li>
-                                <li><a class="dropdown-item" href="{% url 'home' %}?country=za">South Africa</a></li>
-                                <li><a class="dropdown-item" href="{% url 'home' %}?country=ua">Ukraine</a></li>
-                                <li><a class="dropdown-item" href="{% url 'home' %}?country=us">United States</a></li>
-                                <li><a class="dropdown-item" href="{% url 'home' %}?country=gb">United Kingdom</a></li>
+                                <li><a class="dropdown-item {% if country == 'de' %}active{% endif %}" href="{% url 'home' %}?country=de">Germany</a></li>
+                                <li><a class="dropdown-item {% if country == 'in' %}active{% endif %}" href="{% url 'home' %}?country=in">India</a></li>
+                                <li><a class="dropdown-item {% if country == 'ie' %}active{% endif %}" href="{% url 'home' %}?country=ie">Ireland</a></li>
+                                <li><a class="dropdown-item {% if country == 'il' %}active{% endif %}" href="{% url 'home' %}?country=il">Israel</a></li>
+                                <li><a class="dropdown-item {% if country == 'ru' %}active{% endif %}" href="{% url 'home' %}?country=ru">Russia</a></li>
+                                <li><a class="dropdown-item {% if country == 'za' %}active{% endif %}" href="{% url 'home' %}?country=za">South Africa</a></li>
+                                <li><a class="dropdown-item {% if country == 'ua' %}active{% endif %}" href="{% url 'home' %}?country=ua">Ukraine</a></li>
+                                <li><a class="dropdown-item {% if country == 'us' %}active{% endif %}" href="{% url 'home' %}?country=us">United States</a></li>
+                                <li><a class="dropdown-item {% if country == 'gb' %}active{% endif %}" href="{% url 'home' %}?country=gb">United Kingdom</a></li>
                             </ul>
                         </li>
+                        
                         <!-- Categories Dropdown links -->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Categories</a>
@@ -70,6 +71,13 @@
                             <a class="nav-link {% if url_name == 'accounts_signup' %}active{% endif %}" href="/accounts/signup/">Register</a>
                         </li>
                         {% endif %}
+
+                        <li class="nav-item">
+                            <form class="d-flex" method="get" action="{% url 'home' %}">
+                                <input class="form-control me-2" type="search" name="q" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-success" type="submit">Search</button>
+                            </form>
+                        </li>
                     </ul>
                 </div>
             </div>

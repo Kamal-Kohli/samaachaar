@@ -50,12 +50,12 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Categories</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="{% url 'home' %}?category=Sports">Sports</a></li>
-                                <li><a class="dropdown-item" href="{% url 'home' %}?category=Business">Business</a></li>
-                                <li><a class="dropdown-item" href="{% url 'home' %}?category=Entertainment">Entertainment</a></li>
-                                <li><a class="dropdown-item" href="{% url 'home' %}?category=technology">Technology</a></li>
-                                <li><a class="dropdown-item" href="{% url 'home' %}?category=health">Health</a></li>
-                                <li><a class="dropdown-item" href="{% url 'home' %}?category=Science">Science</a></li>
+                                <li><a class="dropdown-item {% if category == 'Business' %}active{% endif %}" href="{% url 'home' %}?category=Business">Business</a></li>
+                                <li><a class="dropdown-item {% if category == 'Entertainment' %}active{% endif %}" href="{% url 'home' %}?category=Entertainment">Entertainment</a></li>
+                                <li><a class="dropdown-item {% if category == 'Health' %}active{% endif %}" href="{% url 'home' %}?category=health">Health</a></li>
+                                <li><a class="dropdown-item {% if category == 'Science' %}active{% endif %}" href="{% url 'home' %}?category=Science">Science</a></li>
+                                <li><a class="dropdown-item {% if category == 'Sports' %}active{% endif %}" href="{% url 'home' %}?category=Sports">Sports</a></li>
+                                <li><a class="dropdown-item {% if category == 'Technology' %}active{% endif %}" href="{% url 'home' %}?category=technology">Technology</a></li>
                             </ul>
                         </li>
                         <!-- Registration/Login/Logout -->
@@ -71,13 +71,6 @@
                             <a class="nav-link {% if url_name == 'accounts_signup' %}active{% endif %}" href="/accounts/signup/">Register</a>
                         </li>
                         {% endif %}
-
-                        <li class="nav-item">
-                            <form class="d-flex" method="get" action="{% url 'home' %}">
-                                <input class="form-control me-2" type="search" name="q" placeholder="Search" aria-label="Search">
-                                <button class="btn btn-outline-success" type="submit">Search</button>
-                            </form>
-                        </li>
                     </ul>
                 </div>
             </div>
@@ -85,7 +78,6 @@
     {% endwith %}
    
     
-
     
     <!-- Cards.html -->
     <div class="content container">
